@@ -7,13 +7,21 @@
 	</script>
 
 	<style>
-	body {
-		transform: scale(0.8);
-		transform-origin: top left;
-		width: 125%;
-	}
-	</style>
+  /* achica todo el contenido embebido */
+  #contentIFrame{
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+    height: 125vh; /* para que no se corte */
+    border: 0;
+  }
 
+  /* opcional: evita scroll raro del body */
+  body{
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
 </head>
 	<body onload="showHideArrows()">
 		<iframe onload="showHideArrows()" id="contentIFrame" class="contentIframeClass" src="publication-web-resources/html/publication.html">		</iframe>
