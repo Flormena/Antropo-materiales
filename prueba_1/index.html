@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <style>
-    html, body { height: 100%; margin: 0; }
-    body { background: #111; overflow: hidden; }
+<link href="publication-web-resources/css/main.css" rel="stylesheet">
+<script src="publication-web-resources/script/main.js"></script>
 
-    /* pantalla */
-    #viewport{
-      position: fixed;
-      inset: 0;
-      display: grid;
-      place-items: center;
-    }
+<style>
+html, body {
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  background:#111;
+}
 
-    /* “stage” escalable (sin necesitar saber el alto exacto) */
-    #stage{
-      width: var(--w);
-      height: var(--h);
-      transform-origin: top left;
-      transform: scale(var(--s));
-      background: transparent;
-    }
+/* pantalla */
+#viewport{
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
+}
 
-    iframe{
-      width: var(--w);
-      height: var(--h);
-      border: 0;
-      display: block;
-      background: transparent;
-    }
-  </style>
+/* stage escalable */
+#stage{
+  width:var(--w);
+  height:var(--h);
+  transform-origin:top left;
+  transform:scale(var(--s));
+}
+
+/* iframe */
+#contentIFrame{
+  width:var(--w);
+  height:var(--h);
+  border:0;
+  display:block;
+}
+
+/* BOTONES */
+.prev, .next{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:9999;
+  font-size:60px;
+  cursor:pointer;
+  color:white;
+  padding:10px 18px;
+  background:rgba(0,0,0,0.3);
+  border-radius:10px;
+  user-select:none;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+</style>
 </head>
 
-<body>
+<body onload="showHideArrows()">
+
 <div id="viewport">
   <div id="stage">
-    <iframe ...></iframe>
+    <iframe 
+      id="contentIFrame"
+      src="publication-web-resources/html/publication.html">
+    </iframe>
   </div>
 </div>
 
-<div class="prev">...</div>
-<div class="next">...</div>
+<div class="prev" onclick="showPreviousPage()">&#10094;</div>
+<div class="next" onclick="showNextPage()">&#10095;</div>
 
-  <script>
-    // PONÉ ACÁ EL ANCHO BASE de tu diseño (si exportaste a 1920, dejalo)
-    const BASE_W = 1920;
+<script>
+const BASE_W = 1920;
 
-    // Detecta alto real del contenido y escala para que entre en pantalla
-    function fit(){
-      const iframe = document.getElementById('contentIFrame');
-      const stage  = document.getElementById('stage');
+function fit(){
+  const iframe = document.getElementById('contentIFrame');
+  const stage  = document.getElementById('stage');
 
-      // Ancho fijo, alto real desde el contenido (si el navegador lo permite)
-      let h = 1080; // fallback
+  let h = 1080;
 
-      try {
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        const body = doc.body;
-        const html = doc.documentElement;
-        h = Math.max(
-          body.scrollHeight, body.offsetHeight,
-          html.clientHeight, html.scrollHeight, html.offsetHeight
-        );
-      } catch(e) {
-        // si no se puede leer (por seguridad), usamos fallback
-      }
+  try{
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    const body = doc.body;
+    const html = doc.documentElement;
+    h = Math.max(
+      body.scrollHeight, body.offsetHeight,
+      html.clientHeight, html.scrollHeight, html.offsetHeight
+    );
+  }catch(e){}
 
-      // set CSS vars
-      stage.style.setProperty('--w', BASE_W + 'px');
-      stage.style.setProperty('--h', h + 'px');
+  stage.style.setProperty('--w', BASE_W+'px');
+  stage.style.setProperty('--h', h+'px');
 
-      const s = Math.min(window.innerWidth / BASE_W, window.innerHeight / h);
-      stage.style.setProperty('--s', s);
-    }
+  const s = Math.min(window.innerWidth/BASE_W, window.innerHeight/h);
+  stage.style.setProperty('--s', s);
+}
 
-    window.addEventListener('resize', fit);
-    document.getElementById('contentIFrame').addEventListener('load', fit);
-  </script>
+window.addEventListener('resize', fit);
+document.getElementById('contentIFrame').addEventListener('load', fit);
+</script>
+
 </body>
 </html>
