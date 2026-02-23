@@ -537,27 +537,34 @@ span.CharOverride-11 {
 	font-weight:900;
 }
 span.CharOverride-12 {
+	color:#000000;
+	font-family:Montserrat, sans-serif;
+	font-size:61px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-13 {
 	color:#ffffff;
 	font-family:Montserrat, sans-serif;
 	font-size:38.6px;
 	font-style:normal;
 	font-weight:bold;
 }
-span.CharOverride-13 {
+span.CharOverride-14 {
 	color:#77c5b8;
 	font-family:Montserrat, sans-serif;
 	font-size:26.4px;
 	font-style:normal;
 	font-weight:bold;
 }
-span.CharOverride-14 {
+span.CharOverride-15 {
 	color:#4f5cd6;
 	font-family:Montserrat, sans-serif;
 	font-size:26.4px;
 	font-style:normal;
 	font-weight:bold;
 }
-span.CharOverride-15 {
+span.CharOverride-16 {
 	color:#4f5cd6;
 	font-family:"Montserrat ExtraBold", sans-serif;
 	font-size:26.4px;
@@ -732,7 +739,7 @@ span.CharOverride-15 {
 	transform-origin:0% 0%;
 	width:1933.50px;
 }
-#_idContainer014 {
+#_idContainer014, #_idContainer026 {
 	-ms-transform:translate(165.000px,77.910px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
 	-ms-transform-origin:0% 0%;
 	-webkit-perspective:1px;
@@ -793,7 +800,7 @@ span.CharOverride-15 {
 	transform-origin:0% 0%;
 	width:798.16px;
 }
-#_idContainer019, #_idContainer026, #_idContainer028, #_idContainer032 {
+#_idContainer019, #_idContainer028, #_idContainer032 {
 	-ms-transform:translate(165.000px,77.910px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
 	-ms-transform-origin:0% 0%;
 	-webkit-perspective:1px;
