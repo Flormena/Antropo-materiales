@@ -1,69 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link href="publication-web-resources/css/main.css" rel="stylesheet" type="text/css">
-<script src="publication-web-resources/script/main.js" type="text/javascript"></script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { background: #111; overflow: hidden; }
 
-<style>
-html, body{
-  margin:0;
-  padding:0;
-  overflow:hidden;
-}
+    /* pantalla */
+    #viewport{
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
 
-/* contenedor pantalla */
-#viewport{
-  width:100vw;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
+    /* “stage” escalable (sin necesitar saber el alto exacto) */
+    #stage{
+      width: var(--w);
+      height: var(--h);
+      transform-origin: top left;
+      transform: scale(var(--s));
+      background: transparent;
+    }
 
-/* tamaño real del diseño */
-#stage{
-  width:1920px;
-  height:1080px;   /* tu tamaño real */
-  transform-origin: top left;
-  transform: scale(var(--scale));
-}
-
-/* escala automática */
-#viewport{
-  --scale: min(calc(100vw / 1920), calc(100vh / 1080));
-}
-
-/* iframe encaja perfecto */
-#contentIFrame{
-  width:1920px;
-  height:1080px;
-  border:0;
-  display:block;
-}
-</style>
-
+    iframe{
+      width: var(--w);
+      height: var(--h);
+      border: 0;
+      display: block;
+      background: transparent;
+    }
+  </style>
 </head>
 
-<body onload="showHideArrows()">
-
-<div id="viewport">
-  <div id="stage">
-    <iframe 
-      onload="showHideArrows()" 
-      id="contentIFrame" 
-      class="contentIframeClass" 
-      src="publication-web-resources/html/publication.html">
-    </iframe>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <iframe id="contentIFrame"
+              src="publication-web-resources/html/publication.html"
+              title="Presentación">
+      </iframe>
+    </div>
   </div>
-</div>
 
-<iframe id="dummyIFrame" class="dummyFrameClass"></iframe>
-<div class="prev" onclick="showPreviousPage()">&#10094;</div>
-<div class="next" onclick="showNextPage()">&#10095;</div>
+  <script>
+    // PONÉ ACÁ EL ANCHO BASE de tu diseño (si exportaste a 1920, dejalo)
+    const BASE_W = 1920;
 
+    // Detecta alto real del contenido y escala para que entre en pantalla
+    function fit(){
+      const iframe = document.getElementById('contentIFrame');
+      const stage  = document.getElementById('stage');
+
+      // Ancho fijo, alto real desde el contenido (si el navegador lo permite)
+      let h = 1080; // fallback
+
+      try {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        const body = doc.body;
+        const html = doc.documentElement;
+        h = Math.max(
+          body.scrollHeight, body.offsetHeight,
+          html.clientHeight, html.scrollHeight, html.offsetHeight
+        );
+      } catch(e) {
+        // si no se puede leer (por seguridad), usamos fallback
+      }
+
+      // set CSS vars
+      stage.style.setProperty('--w', BASE_W + 'px');
+      stage.style.setProperty('--h', h + 'px');
+
+      const s = Math.min(window.innerWidth / BASE_W, window.innerHeight / h);
+      stage.style.setProperty('--s', s);
+    }
+
+    window.addEventListener('resize', fit);
+    document.getElementById('contentIFrame').addEventListener('load', fit);
+  </script>
 </body>
 </html>
