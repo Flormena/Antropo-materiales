@@ -1,70 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-<link href="publication-web-resources/css/main.css" rel="stylesheet">
-<script src="publication-web-resources/script/main.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-html, body {
-  height:100%;
+html, body{
   margin:0;
+  height:100%;
   overflow:hidden;
   background:#111;
 }
 
-/* pantalla */
-#viewport{
+#wrap{
   position:fixed;
-  inset:0;
-  display:grid;
-  place-items:center;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* stage escalable */
 #stage{
-  width:var(--w);
-  height:var(--h);
-  transform-origin:top left;
-  transform:scale(var(--s));
+  width:1920px;
+  height:1080px;
+  transform-origin: top left;
 }
 
-/* iframe */
-#contentIFrame{
-  width:var(--w);
-  height:var(--h);
+iframe{
+  width:1920px;
+  height:1080px;
   border:0;
   display:block;
 }
-
-/* BOTONES */
-.prev, .next{
-  position:fixed;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:9999;
-  font-size:60px;
-  cursor:pointer;
-  color:white;
-  padding:10px 18px;
-  background:rgba(0,0,0,0.3);
-  border-radius:10px;
-  user-select:none;
-}
-
-.prev{ left:10px; }
-.next{ right:10px; }
 </style>
 </head>
 
-<body onload="showHideArrows()">
+<body>
 
-<div id="viewport">
+<div id="wrap">
   <div id="stage">
-    <iframe 
-      id="contentIFrame"
+    <iframe id="contentIFrame"
       src="publication-web-resources/html/publication.html">
     </iframe>
   </div>
@@ -74,33 +52,19 @@ html, body {
 <div class="next" onclick="showNextPage()">&#10095;</div>
 
 <script>
-const BASE_W = 1920;
-
 function fit(){
-  const iframe = document.getElementById('contentIFrame');
-  const stage  = document.getElementById('stage');
+  const stage = document.getElementById('stage');
 
-  let h = 1080;
+  const scale = Math.min(
+    window.innerWidth / 1920,
+    window.innerHeight / 1080
+  );
 
-  try{
-    const doc = iframe.contentDocument || iframe.contentWindow.document;
-    const body = doc.body;
-    const html = doc.documentElement;
-    h = Math.max(
-      body.scrollHeight, body.offsetHeight,
-      html.clientHeight, html.scrollHeight, html.offsetHeight
-    );
-  }catch(e){}
-
-  stage.style.setProperty('--w', BASE_W+'px');
-  stage.style.setProperty('--h', h+'px');
-
-  const s = Math.min(window.innerWidth/BASE_W, window.innerHeight/h);
-  stage.style.setProperty('--s', s);
+  stage.style.transform = "scale("+scale+")";
 }
 
 window.addEventListener('resize', fit);
-document.getElementById('contentIFrame').addEventListener('load', fit);
+window.onload = fit;
 </script>
 
 </body>
