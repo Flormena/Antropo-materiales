@@ -1,0 +1,92 @@
+---
+title: "Presentación"
+output-file: index.html
+format: 
+  revealjs:
+    transition: slide
+    self-contained: true
+    navigation-mode: vertical
+    slide-number: true
+---
+
+# Inicio
+
+Este es un ejemplo simple de navegación.
+
+```{=html}
+<button onclick="Reveal.slide(1)">Ir al video</button>
+
+<button onclick="Reveal.slide(2)">Ir al podcast</button>
+```
+
+---
+
+# Video
+
+Video integrado.
+
+```{=html}
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+```
+
+```{=html}
+<br><br>
+<button onclick="Reveal.slide(0)">Volver al inicio</button>
+```
+
+---
+
+# Podcast
+
+Audio integrado.
+
+```{=html}
+<audio controls>
+  <source src="podcast.mp3" type="audio/mpeg">
+</audio>
+```
+
+```{=html}
+<br><br>
+<button onclick="Reveal.slide(0)">Volver al inicio</button>
+```
+
+---
+
+# Interacción simple
+
+Presioná el botón para mostrar texto.
+
+```{=html}
+<button onclick="mostrar()">Mostrar texto</button>
+
+<div id="texto" style="display:none; margin-top:20px;">
+Este contenido aparece al presionar el botón.
+</div>
+
+<script>
+function mostrar() {
+  document.getElementById("texto").style.display = "block";
+}
+</script>
+```
+
+
+```{=html}
+<iframe
+width="800"
+height="500"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://www.google.com/maps?q=Buenos+Aires&output=embed">
+</iframe>
+```
+
+
+
+
