@@ -1,0 +1,99 @@
+---
+title: "Unidad 1"
+format: 
+  revealjs:
+    transition: slide
+    navigation-mode: vertical
+    slide-number: true
+    css: ../assets/estilo.css
+---
+
+# Inicio
+
+Este es un ejemplo simple de navegación.
+
+```{=html}
+<div class="btn-group">
+  <button class="nav-btn" onclick="Reveal.slide(1)">
+    <img src="../assets/img/camara.png"> Video
+  </button>
+  <button class="nav-btn" onclick="Reveal.slide(2)">
+    <img src="../assets/img/podcast.png"> Podcast
+  </button>
+</div>
+```
+
+---
+
+# Video
+
+Video integrado.
+
+```{=html}
+<iframe width="100%" height="400" 
+  src="https://www.youtube.com/embed/J0VBnrIkAtA?si=19bKfV9gUHPboiO_&rel=0&modestbranding=1" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>
+```
+
+```{=html}
+<br><br>
+<button onclick="Reveal.slide(0)">Volver al inicio</button>
+```
+
+---
+
+# Podcast
+
+Audio integrado.
+
+```{=html}
+<audio controls>
+  <source src="podcast.mp3" type="audio/mpeg">
+</audio>
+```
+
+```{=html}
+<br><br>
+<button onclick="Reveal.slide(0)">Volver al inicio</button>
+```
+
+---
+
+# Interacción simple
+
+Presioná el botón para mostrar texto.
+
+```{=html}
+<button onclick="mostrar()">Mostrar texto</button>
+
+<div id="texto" style="display:none; margin-top:20px;">
+Este contenido aparece al presionar el botón.
+</div>
+
+<script>
+function mostrar() {
+  document.getElementById("texto").style.display = "block";
+}
+</script>
+```
+
+
+```{=html}
+<iframe
+width="800"
+height="500"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://www.google.com/maps?q=Buenos+Aires&output=embed">
+</iframe>
+```
+
+
+
+

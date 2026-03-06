@@ -10,7 +10,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <title>Presentación</title>
+  <title>Unidad 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../assets/estilo.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -325,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Presentación</h1>
+  <h1 class="title">Unidad 1</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -335,9 +336,14 @@
 <section id="inicio" class="title-slide slide level1 center">
 <h1>Inicio</h1>
 <p>Este es un ejemplo simple de navegación.</p>
-<button onclick="Reveal.slide(1)">Ir al video</button>
-
-<button onclick="Reveal.slide(2)">Ir al podcast</button>
+<div class="btn-group">
+  <button class="nav-btn" onclick="Reveal.slide(1)">
+    <img src="../assets/img/camara.png"> Video
+  </button>
+  <button class="nav-btn" onclick="Reveal.slide(2)">
+    <img src="../assets/img/podcast.png"> Podcast
+  </button>
+</div>
 </section>
 <section class="slide level2">
 
@@ -346,7 +352,7 @@
 <section id="video" class="title-slide slide level1 center">
 <h1>Video</h1>
 <p>Video integrado.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen="">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/J0VBnrIkAtA?si=19bKfV9gUHPboiO_&amp;rel=0&amp;modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 <br><br>
 <button onclick="Reveal.slide(0)">Volver al inicio</button>
