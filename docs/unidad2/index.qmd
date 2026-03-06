@@ -6,6 +6,7 @@ format:
     navigation-mode: vertical
     slide-number: true
     css: ../assets/estilo.css
+    font-size: 28px
 ---
 
 # El problema del orden social {.center}
