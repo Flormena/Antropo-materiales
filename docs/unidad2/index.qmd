@@ -1,52 +1,156 @@
 ---
 title: "Unidad 2"
+subtitle: "El problema del orden social: Conflicto y gobierno"
 format: 
   revealjs:
     transition: slide
-    navigation-mode: vertical
+    navigation-mode: linear
+    controls: false
     slide-number: true
     css: ../assets/estilo.css
-    font-size: 28px
+    include-in-header:
+      text: |
+        <style>
+          .reveal { font-size: 20px !important; }
+
+          /* Centrado vertical */
+          .reveal .slides section {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            height: 100% !important;
+          }
+
+          /* Columnas con float */
+          .col-text {
+            float: left;
+            width: 48%;
+          }
+          .col-links {
+            float: right;
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+          }
+          .col-text p {
+            font-size: 0.85em;
+            line-height: 1.7;
+            color: #555;
+          }
+          .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+          }
+        </style>
+    include-after-body:
+      text: |
+        <div id="nav-arrows">
+          <button onclick="Reveal.prev()">&#8249;</button>
+          <button onclick="Reveal.next()">&#8250;</button>
+        </div>
+        <style>
+          #nav-arrows {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+            z-index: 999;
+          }
+          #nav-arrows button {
+            pointer-events: all;
+            background: none;
+            border: none;
+            font-size: 3rem;
+            color: #c0392b;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.2s;
+            line-height: 1;
+            box-shadow: none;
+          }
+          #nav-arrows button:hover {
+            opacity: 1;
+            transform: none;
+            background: none;
+            box-shadow: none;
+            color: #c0392b;
+          }
+        </style>
 ---
 
-# El problema del orden social {.center}
+## Conflicto y gobierno {#inicio}
 
-**Conflicto y gobierno**
+::: {.fragment .fade-up}
+```{=html}
+<p style="color:#999; font-size:0.8em; margin-bottom:1.2rem;">Seleccioná un material para explorar</p>
+```
+:::
 
+::: {.fragment .fade-up}
 ```{=html}
 <div class="btn-group">
-  <button class="nav-btn" onclick="Reveal.slide(1)">📷 Fotografías</button>
-  <button class="nav-btn" onclick="Reveal.slide(2)">🎬 Film Los Nuer</button>
-  <button class="nav-btn" onclick="Reveal.slide(3)">📰 Sudán hoy</button>
-  <button class="nav-btn" onclick="Reveal.slide(4)">🗂️ Nuer Dilemmas</button>
-  <button class="nav-btn" onclick="Reveal.slide(5)">📦 Box of Treasures</button>
+  <a class="nav-btn" href="#/fotografias">📷 Fotografías</a>
+  <a class="nav-btn" href="#/film">🎬 Film Los Nuer</a>
+  <a class="nav-btn" href="#/sudan">📰 Sudán hoy</a>
+  <a class="nav-btn" href="#/nuer-dilemmas">🗂️ Nuer Dilemmas</a>
+  <a class="nav-btn" href="#/box">📦 Box of Treasures</a>
 </div>
 ```
+:::
 
 ---
 
-## Fotografías de Evans-Pritchard
+## Fotografías de Evans-Pritchard {#fotografias}
 
-El Southern Sudan Project del Museo Pitt Rivers (Universidad de Oxford) digitalizó más de 2500 fotografías tomadas por Evans-Pritchard durante su trabajo de campo en Sudán entre 1926 y 1936. Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otros pueblos: ceremonias, viviendas, ganado y retratos.
-
+::: {.fragment .fade-up}
 ```{=html}
-<div class="btn-group">
-  <a class="nav-btn" href="https://southernsudan.prm.ox.ac.uk/search/photographer/Pritchard/index.html" target="_blank">↗ Southern Sudan Project</a>
-  <a class="nav-btn" href="https://www.youtube.com/watch?v=Q_5-qUE3e8g" target="_blank">↗ Video relacionado</a>
+<div class="col-text">
+  <p>El Southern Sudan Project del Museo Pitt Rivers (Universidad de Oxford) digitalizó más de 2500 fotografías tomadas por Evans-Pritchard durante su trabajo de campo en Sudán entre 1926 y 1936.</p>
+  <p style="margin-top:0.8rem;">Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otros pueblos: ceremonias, viviendas, ganado y retratos.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+  </div>
 </div>
-<br>
-<button class="nav-btn" onclick="Reveal.slide(0)">← Volver al inicio</button>
 ```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <a class="nav-btn" href="https://southernsudan.prm.ox.ac.uk/search/photographer/Pritchard/index.html" target="_blank">↗ Southern Sudan Project — Pitt Rivers Museum</a>
+</div>
+<div class="clearfix"></div>
+```
+:::
 
 ---
 
-## Film: Los Nuer
+## Film: Los Nuer {#film}
 
-*The Nuer* (Hilary Harris & George Breidenbach, 1971) — film etnográfico distribuido por el Film Study Center de Harvard. 73 minutos grabados en un campamento ganadero de Sudán.
-
+::: {.fragment .fade-up}
 ```{=html}
-<div style="width: 75%; margin: 1rem auto;">
-  <iframe width="100%" height="340"
+<div class="col-text">
+  <p><em>The Nuer</em> (Hilary Harris & George Breidenbach, 1971)</p>
+  <p style="margin-top:0.8rem;">Film etnográfico distribuido por el Film Study Center de Harvard. 73 minutos grabados en un campamento ganadero de Sudán del Sur.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <iframe width="100%" height="220"
     src="https://www.youtube.com/embed/Q_5-qUE3e8g?rel=0&modestbranding=1"
     title="The Nuer"
     frameborder="0"
@@ -55,48 +159,81 @@ El Southern Sudan Project del Museo Pitt Rivers (Universidad de Oxford) digitali
     allowfullscreen>
   </iframe>
 </div>
-<button class="nav-btn" onclick="Reveal.slide(0)">← Volver al inicio</button>
+<div class="clearfix"></div>
 ```
+:::
 
 ---
 
-## Sudán en la actualidad
+## Sudán en la actualidad {#sudan}
 
-Complemento del material de la Revista Crisis. Tres lecturas sobre el conflicto contemporáneo en Sudán:
-
+::: {.fragment .fade-up}
 ```{=html}
-<div class="btn-group" style="flex-direction: column; align-items: flex-start;">
+<div class="col-text">
+  <p>Complemento del material de la Revista Crisis. Tres lecturas sobre el conflicto contemporáneo en Sudán y sus dimensiones regionales e internacionales.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
   <a class="nav-btn" href="https://newleftreview.org/sidecar/posts/sudans-world-war" target="_blank">↗ Sudan's World War — New Left Review</a>
   <a class="nav-btn" href="https://www.newsocialist.org.uk/where-sudan-refracting-globe-through-bilad-al-dahab/" target="_blank">↗ Where Sudan — New Socialist</a>
   <a class="nav-btn" href="https://spectrejournal.com/uaes-subimperialism-in-sudan/" target="_blank">↗ UAE's Subimperialism in Sudan — Spectre</a>
 </div>
-<br>
-<button class="nav-btn" onclick="Reveal.slide(0)">← Volver al inicio</button>
+<div class="clearfix"></div>
 ```
+:::
 
 ---
 
-## Nuer Dilemmas
+## Nuer Dilemmas {#nuer-dilemmas}
 
-Sharon Hutchinson creó un archivo para preservar el pasado, presente y futuro de las poblaciones del sur de Sudán. El sitio reúne fotografías y audios de conversaciones en Sudán — complemento directo de su libro.
-
+::: {.fragment .fade-up}
 ```{=html}
-<div class="btn-group">
+<div class="col-text">
+  <p>Sharon Hutchinson creó un archivo para preservar el pasado, presente y futuro de las poblaciones del sur de Sudán.</p>
+  <p style="margin-top:0.8rem;">El sitio reúne fotografías y audios de conversaciones en Sudán — complemento directo de su libro <em>Nuer Dilemmas</em>.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
   <a class="nav-btn" href="https://www.nuerdilemmas.com/project" target="_blank">↗ Ver archivo Nuer Dilemmas</a>
 </div>
-<br>
-<button class="nav-btn" onclick="Reveal.slide(0)">← Volver al inicio</button>
+<div class="clearfix"></div>
 ```
+:::
 
 ---
 
-## Box of Treasures
+## Box of Treasures {#box}
 
-Video realizado por Chuck Olin en colaboración con el U'mista Cultural Centre. A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos culturales —máscaras, esculturas y artefactos— funcionan como portadores de significados e identidades dentro de la comunidad.
-
+::: {.fragment .fade-up}
 ```{=html}
-<div style="width: 75%; margin: 1rem auto;">
-  <iframe width="100%" height="340"
+<div class="col-text">
+  <p>Video realizado por Chuck Olin en colaboración con el U'mista Cultural Centre.</p>
+  <p style="margin-top:0.8rem;">A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos culturales —máscaras, esculturas y artefactos— funcionan como portadores de significados e identidades dentro de la comunidad.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <iframe width="100%" height="220"
     src="https://www.youtube.com/embed/LAti7TNOSaA?rel=0&modestbranding=1"
     title="Box of Treasures"
     frameborder="0"
@@ -105,5 +242,6 @@ Video realizado por Chuck Olin en colaboración con el U'mista Cultural Centre. 
     allowfullscreen>
   </iframe>
 </div>
-<button class="nav-btn" onclick="Reveal.slide(0)">← Volver al inicio</button>
+<div class="clearfix"></div>
 ```
+:::
