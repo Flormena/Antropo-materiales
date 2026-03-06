@@ -30,7 +30,7 @@ Este es un ejemplo simple de navegación.
 Video integrado.
 
 ```{=html}
-<iframe width="100%" height="400" 
+<iframe width="100%" height="40%" 
   src="https://www.youtube.com/embed/J0VBnrIkAtA?si=19bKfV9gUHPboiO_&rel=0&modestbranding=1" 
   title="YouTube video player" 
   frameborder="0" 
