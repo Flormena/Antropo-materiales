@@ -12,16 +12,12 @@ format:
       text: |
         <style>
           .reveal { font-size: 20px !important; }
-
-          /* Centrado vertical */
           .reveal .slides section {
             display: flex !important;
             flex-direction: column !important;
             justify-content: center !important;
             height: 100% !important;
           }
-
-          /* Columnas con float */
           .col-text {
             float: left;
             width: 48%;
@@ -97,11 +93,9 @@ format:
 ::: {.fragment .fade-up}
 ```{=html}
 <div class="btn-group">
-  <a class="nav-btn" href="#/fotografias">📷 Fotografías</a>
-  <a class="nav-btn" href="#/film">🎬 Film Los Nuer</a>
-  <a class="nav-btn" href="#/sudan">📰 Sudán hoy</a>
-  <a class="nav-btn" href="#/nuer-dilemmas">🗂️ Nuer Dilemmas</a>
-  <a class="nav-btn" href="#/box">📦 Box of Treasures</a>
+  <a class="nav-btn" href="#/fotografias">📷 Archivo</a>
+  <a class="nav-btn" href="#/videos">🎬 Videos</a>
+  <a class="nav-btn" href="#/articulos">📰 Artículos</a>
 </div>
 ```
 :::
@@ -133,7 +127,21 @@ format:
 
 ---
 
-## Film: Los Nuer {#film}
+## Videos {#videos}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="btn-group">
+  <a class="nav-btn" href="#/nuer">🎬 The Nuer</a>
+  <a class="nav-btn" href="#/box">📦 Box of Treasures</a>
+  <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+</div>
+```
+:::
+
+---
+
+## Film: Los Nuer {#nuer}
 
 ::: {.fragment .fade-up}
 ```{=html}
@@ -141,7 +149,7 @@ format:
   <p><em>The Nuer</em> (Hilary Harris & George Breidenbach, 1971)</p>
   <p style="margin-top:0.8rem;">Film etnográfico distribuido por el Film Study Center de Harvard. 73 minutos grabados en un campamento ganadero de Sudán del Sur.</p>
   <div style="margin-top:1.2rem;">
-    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+    <a class="nav-btn" href="#/videos">← Volver a videos</a>
   </div>
 </div>
 ```
@@ -165,57 +173,6 @@ format:
 
 ---
 
-## Sudán en la actualidad {#sudan}
-
-::: {.fragment .fade-up}
-```{=html}
-<div class="col-text">
-  <p>Complemento del material de la Revista Crisis. Tres lecturas sobre el conflicto contemporáneo en Sudán y sus dimensiones regionales e internacionales.</p>
-  <div style="margin-top:1.2rem;">
-    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
-  </div>
-</div>
-```
-:::
-
-::: {.fragment .fade-up}
-```{=html}
-<div class="col-links">
-  <a class="nav-btn" href="https://newleftreview.org/sidecar/posts/sudans-world-war" target="_blank">↗ Sudan's World War — New Left Review</a>
-  <a class="nav-btn" href="https://www.newsocialist.org.uk/where-sudan-refracting-globe-through-bilad-al-dahab/" target="_blank">↗ Where Sudan — New Socialist</a>
-  <a class="nav-btn" href="https://spectrejournal.com/uaes-subimperialism-in-sudan/" target="_blank">↗ UAE's Subimperialism in Sudan — Spectre</a>
-</div>
-<div class="clearfix"></div>
-```
-:::
-
----
-
-## Nuer Dilemmas {#nuer-dilemmas}
-
-::: {.fragment .fade-up}
-```{=html}
-<div class="col-text">
-  <p>Sharon Hutchinson creó un archivo para preservar el pasado, presente y futuro de las poblaciones del sur de Sudán.</p>
-  <p style="margin-top:0.8rem;">El sitio reúne fotografías y audios de conversaciones en Sudán — complemento directo de su libro <em>Nuer Dilemmas</em>.</p>
-  <div style="margin-top:1.2rem;">
-    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
-  </div>
-</div>
-```
-:::
-
-::: {.fragment .fade-up}
-```{=html}
-<div class="col-links">
-  <a class="nav-btn" href="https://www.nuerdilemmas.com/project" target="_blank">↗ Ver archivo Nuer Dilemmas</a>
-</div>
-<div class="clearfix"></div>
-```
-:::
-
----
-
 ## Box of Treasures {#box}
 
 ::: {.fragment .fade-up}
@@ -224,7 +181,7 @@ format:
   <p>Video realizado por Chuck Olin en colaboración con el U'mista Cultural Centre.</p>
   <p style="margin-top:0.8rem;">A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos culturales —máscaras, esculturas y artefactos— funcionan como portadores de significados e identidades dentro de la comunidad.</p>
   <div style="margin-top:1.2rem;">
-    <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+    <a class="nav-btn" href="#/videos">← Volver a videos</a>
   </div>
 </div>
 ```
@@ -241,6 +198,119 @@ format:
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
   </iframe>
+</div>
+<div class="clearfix"></div>
+```
+:::
+
+---
+
+## Artículos {#articulos}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="btn-group">
+  <a class="nav-btn" href="#/art1">↗ Sudan's World War</a>
+  <a class="nav-btn" href="#/art2">↗ Where Sudan</a>
+  <a class="nav-btn" href="#/art3">↗ UAE's Subimperialism</a>
+  <a class="nav-btn" href="#/nuerdilemmas">↗ Nuer Dilemmas</a>
+  <a class="nav-btn" href="#/inicio">← Volver al inicio</a>
+</div>
+```
+:::
+
+---
+
+## Sudan's World War {#art1}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-text">
+  <p>Análisis del conflicto armado en Sudán y sus dimensiones regionales e internacionales.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/articulos">← Volver a artículos</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <a class="nav-btn" href="https://newleftreview.org/sidecar/posts/sudans-world-war" target="_blank">↗ Leer en New Left Review</a>
+</div>
+<div class="clearfix"></div>
+```
+:::
+
+---
+
+## Where Sudan {#art2}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-text">
+  <p>Reflexión sobre la posición de Sudán en el mapa geopolítico contemporáneo.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/articulos">← Volver a artículos</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <a class="nav-btn" href="https://www.newsocialist.org.uk/where-sudan-refracting-globe-through-bilad-al-dahab/" target="_blank">↗ Leer en New Socialist</a>
+</div>
+<div class="clearfix"></div>
+```
+:::
+
+---
+
+## UAE's Subimperialism in Sudan {#art3}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-text">
+  <p>Análisis del rol de los Emiratos Árabes Unidos en el conflicto sudanés y sus intereses en la región.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/articulos">← Volver a artículos</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <a class="nav-btn" href="https://spectrejournal.com/uaes-subimperialism-in-sudan/" target="_blank">↗ Leer en Spectre</a>
+</div>
+<div class="clearfix"></div>
+```
+:::
+
+---
+
+## Nuer Dilemmas {#nuerdilemmas}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-text">
+  <p>Sharon Hutchinson creó un archivo para preservar el pasado, presente y futuro de las poblaciones del sur de Sudán.</p>
+  <p style="margin-top:0.8rem;">El sitio reúne fotografías y audios de conversaciones en Sudán — complemento directo de su libro <em>Nuer Dilemmas</em>.</p>
+  <div style="margin-top:1.2rem;">
+    <a class="nav-btn" href="#/articulos">← Volver a artículos</a>
+  </div>
+</div>
+```
+:::
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="col-links">
+  <a class="nav-btn" href="https://www.nuerdilemmas.com/project" target="_blank">↗ Ver archivo Nuer Dilemmas</a>
 </div>
 <div class="clearfix"></div>
 ```
