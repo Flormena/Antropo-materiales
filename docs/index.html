@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antropología — Materiales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f2;
+      --text: #1a1a1a;
+      --muted: #999;
+      --accent: #c0392b;
+      --surface: #ffffff;
+      --border: #e5e2dd;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    /* HEADER */
+    header {
+      padding: 4rem 6rem 3rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .header-left {}
+
+    .label {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .header-meta {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* GRID */
+    main {
+      padding: 3rem 6rem 5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5px;
+      border: 1.5px solid var(--border);
+    }
+
+    /* CARD */
+    .card {
+      background: var(--surface);
+      padding: 2.2rem 2rem;
+      border: 1.5px solid var(--border);
+      margin: -1.5px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--accent);
+      transition: height 0.25s ease;
+    }
+
+    .card:hover {
+      background: var(--text);
+    }
+
+    .card:hover::before {
+      height: 100%;
+    }
+
+    .card:hover .card-number,
+    .card:hover .card-title,
+    .card:hover .card-arrow {
+      color: var(--bg);
+    }
+
+    .card:hover .card-label {
+      color: #c0392b99;
+    }
+
+    .card-number {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+      color: var(--text);
+      transition: color 0.2s;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+    }
+
+    .card-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    .card-arrow {
+      font-size: 1rem;
+      color: var(--muted);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .card:hover .card-arrow {
+      transform: translate(3px, -3px);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 6rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ANIMATIONS */
+    .card {
+      animation: fadeUp 0.4s ease both;
+    }
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.10s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.20s; }
+    .card:nth-child(5) { animation-delay: 0.25s; }
+    .card:nth-child(6) { animation-delay: 0.30s; }
+    .card:nth-child(7) { animation-delay: 0.35s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 2.5rem 1.5rem 2rem; flex-direction: column; align-items: flex-start; }
+      main { padding: 2rem 1.5rem 4rem; }
+      footer { padding: 1.5rem; }
+      .header-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <p class="label">Materiales de cursada</p>
+      <h1>Antropología</h1>
+    </div>
+    <div class="header-meta">
+      7 unidades<br>
+      Materiales interactivos
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+
+      <a class="card" href="unidad1/">
+        <span class="card-number">UNIDAD 01</span>
+        <span class="card-title">La antropología política clásica: preguntas fundantes y formas de conocer</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad2/">
+        <span class="card-number">UNIDAD 02</span>
+        <span class="card-title">El problema del orden social: conflicto y gobierno</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad3/">
+        <span class="card-number">UNIDAD 03</span>
+        <span class="card-title">Las relaciones de parentesco y la familia en la antropología clásica</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad4/">
+        <span class="card-number">UNIDAD 04</span>
+        <span class="card-title">Parentesco y familia en las sociedades contemporáneas</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad5/">
+        <span class="card-number">UNIDAD 05</span>
+        <span class="card-title">El Estado y sus múltiples caras. Burocracias y violencias</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad6/">
+        <span class="card-number">UNIDAD 06</span>
+        <span class="card-title">El Estado y sus múltiples caras. Poder y clases sociales</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+      <a class="card" href="unidad7/">
+        <span class="card-number">UNIDAD 07</span>
+        <span class="card-title">Los lenguajes de la política. Activismo de los derechos humanos y luchas sociales</span>
+        <div class="card-footer">
+          <span class="card-label">Ver materiales</span>
+          <span class="card-arrow">↗</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    Antropología — Materiales de cursada
+  </footer>
+
+</body>
+</html>
