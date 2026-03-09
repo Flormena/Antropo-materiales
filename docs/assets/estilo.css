@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
 
-/* --- Variables globales --- */
 :root {
   --color-bg: #f7f5f2;
   --color-text: #1a1a1a;
@@ -20,33 +19,46 @@
 }
 
 
-/* Alinear título de portada a la izquierda */
-.reveal .title-slide {
-  text-align: left !important;
+/* Slide de título */
+
+#title-slide {
+  text-align: center;
 }
 
-/* opcional: ajustar margen */
+#title-slide h1 {
+  color: #c0392b;
+  font-size: 4.2em;
+}
+
+#title-slide p.subtitle {
+  color: #c0392b;
+  font-size: 2.8em;
+  margin-top: 0.6em;
+}
+
+
+.reveal .title-slide {
+  text-align: left !important;
+  padding-left: 4rem;
+}
 .reveal .title-slide h1,
 .reveal .title-slide h2 {
   text-align: left !important;
 }
 
-.reveal .title-slide {
-  padding-left: 4rem;
-}
-
-
-/* --- Fondo --- */
 .reveal-viewport {
   background-color: var(--color-bg) !important;
 }
 
 .reveal .slides section {
   background: transparent;
-  padding: 2rem 3.5rem;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding: 2rem 3.5rem !important;
+  height: 100% !important;
 }
 
-/* --- Títulos --- */
 .reveal h1 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -56,6 +68,7 @@
   line-height: 1.1;
   text-transform: none;
   text-shadow: none;
+  text-align: center !important;
   margin-bottom: 0.2em;
 }
 
@@ -68,21 +81,21 @@
   line-height: 1.2;
   text-transform: none;
   text-shadow: none;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.6em;
+  text-align: left !important;
+  width: 100%;
 }
 
 .reveal h3 {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 1.05em;
+  font-size: 0.8em;
   color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.8em;
   text-shadow: none;
 }
 
-/* --- Texto cuerpo --- */
 .reveal p,
 .reveal li {
   font-family: var(--font-body);
@@ -110,7 +123,6 @@
   color: #555;
 }
 
-/* --- Links --- */
 .reveal a {
   font-family: var(--font-body);
   color: var(--color-accent);
@@ -118,12 +130,10 @@
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition);
 }
-
 .reveal a:hover {
   border-bottom-color: var(--color-accent);
 }
 
-/* --- Botones de navegación --- */
 .reveal button,
 .nav-btn {
   font-family: var(--font-body);
@@ -143,30 +153,26 @@
   box-shadow: var(--shadow);
   letter-spacing: 0.01em;
 }
-
 .reveal button:hover,
 .nav-btn:hover {
   background: var(--color-text);
-  color: var(--color-bg);
+  color: var(--color-surface);
   border-color: var(--color-text);
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(0,0,0,0.12);
 }
 
-/* Imágenes dentro de botones */
 .nav-btn img {
   width: 22px;
   height: 22px;
   object-fit: contain;
-  filter: grayscale(1);
+  filter: grayscale(1) invert(1);
   transition: filter var(--transition);
 }
-
 .nav-btn:hover img {
-  filter: grayscale(1) invert(1);
+  filter: grayscale(1);
 }
 
-/* Grupo de botones */
 .btn-group {
   display: flex;
   gap: 0.65rem;
@@ -174,7 +180,6 @@
   margin-top: 1.5rem;
 }
 
-/* --- Imágenes y videos --- */
 .reveal img,
 .reveal video {
   border-radius: var(--radius);
@@ -182,14 +187,12 @@
   max-width: 100%;
   border: none;
 }
-
 .reveal iframe {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: none;
 }
 
-/* --- Número de slide --- */
 .reveal .slide-number {
   font-family: var(--font-body);
   font-size: 0.7em;
@@ -199,28 +202,18 @@
   right: 1.5rem;
 }
 
-/* --- Flechas de navegación --- */
-.reveal .controls {
-  color: var(--color-accent);
-}
-
-.reveal .controls .controls-arrow {
-  opacity: 0.5;
-  transition: opacity var(--transition);
-}
-
-.reveal .controls .controls-arrow:hover {
-  opacity: 1;
-}
-
-/* --- Barra de progreso --- */
 .reveal .progress {
   height: 2px;
   background: var(--color-border);
   color: var(--color-accent);
 }
 
-/* --- Etiqueta de categoría opcional --- */
+.reveal hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 1.5rem 0;
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-body);
@@ -235,18 +228,95 @@
   margin-bottom: 0.8rem;
 }
 
-/* --- Divisor decorativo --- */
-.reveal hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 1.5rem 0;
-}
-
-
 .reveal {
-  font-size: 33px !important;
+  font-size: 22px !important;
+}
+
+.reveal a.nav-btn-back {
+  font-family: var(--font-body);
+  font-size: 0.75em;
+  font-weight: 400;
+  color: white;
+  background: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.reveal a.nav-btn-back:hover {
+  background: #922b21;
+  border-color: #922b21;
+  color: white;
+}
+
+.two-col {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+  margin-top: 0.5rem;
+}
+
+.col-text {
+  flex: 0 0 50% !important;
+  min-width: 0;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.col-links {
+  flex: 0 0 50% !important;
+  min-width: 0;
+  max-width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: flex-start;
 }
 
 
 
+/* ===== Slide de título ===== */
+
+#title-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* eliminar fondo gris del bloque del título */
+
+#title-slide .quarto-title-block {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* mejorar contraste del texto */
+
+#title-slide .title {
+  font-size: 4em;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.7);
+}
+
+#title-slide .subtitle {
+  font-size: 2em;
+  margin-top: 0.4em;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.7);
+}
+
+#title-slide .subtitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
 
