@@ -11,49 +11,10 @@ format:
   revealjs:
     transition: slide
     navigation-mode: linear
-    controls: false
+    controls: true
     slide-number: true
     css: ../assets/estilo.css
-    include-after-body:
-      text: |
-        <div id="nav-arrows">
-          <button onclick="Reveal.prev()">&#8249;</button>
-          <button onclick="Reveal.next()">&#8250;</button>
-        </div>
-        <style>
-          #nav-arrows {
-            position: fixed;
-            top: 50%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1.5rem;
-            transform: translateY(-50%);
-            pointer-events: none;
-            z-index: 999;
-          }
-          #nav-arrows button {
-            pointer-events: all;
-            background: none;
-            border: none;
-            font-size: 3rem;
-            color: #c0392b;
-            cursor: pointer;
-            opacity: 0.4;
-            transition: opacity 0.2s;
-            line-height: 1;
-            box-shadow: none;
-          }
-          #nav-arrows button:hover {
-            opacity: 1;
-            transform: none;
-            background: none;
-            box-shadow: none;
-            color: #c0392b;
-          }
-        </style>
+    
 ---
 
 ## Conflicto y gobierno {#inicio}
@@ -67,7 +28,7 @@ format:
 ::: {.fragment .fade-up}
 ```{=html}
 <div class="btn-group">
-  <a class="nav-btn" href="#/fotografias">📷 Archivo</a>
+  <a class="nav-btn" href="#/archivos">🗂️ Archivos</a>
   <a class="nav-btn" href="#/videos">🎬 Videos</a>
   <a class="nav-btn" href="#/articulos">📰 Artículos</a>
 </div>
@@ -76,18 +37,35 @@ format:
 
 ---
 
-## Fotografías de Evans-Pritchard {#fotografias}
+
+## Archivos {#archivos .seccion}
+
+::: {.fragment .fade-up}
+```{=html}
+<div class="btn-group">
+  <a class="nav-btn" href="#/fotografias">📷 Fotografías de Evans-Pritchard</a>
+</div>
+<div class="btn-group">
+  <a class="nav-btn-back" href="#/inicio">← Volver al inicio</a>
+</div>
+```
+:::
+
+---
+
+
+## Fotografías de Evans-Pritchard {#fotografia}
 
 :::: {.columns}
 
-::: {.column width="50%" .fragment .fade-up}
+::: {.column width="50%" .fragment .fade-left}
 El Southern Sudan Project del Museo Pitt Rivers (Universidad de Oxford) digitalizó más de 2500 fotografías tomadas por Evans-Pritchard durante su trabajo de campo en Sudán entre 1926 y 1936.
 
 Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otros pueblos: ceremonias, viviendas, ganado y retratos.
 
 ```{=html}
 <div style="margin-top:1.2rem;">
-  <a class="nav-btn-back" href="#/inicio">← Volver al inicio</a>
+  <a class="nav-btn-back" href="#/archivos">← Volver a archivos</a>
 </div>
 ```
 :::
@@ -104,7 +82,7 @@ Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otro
 
 ---
 
-## Videos {#videos}
+## Videos {#videos .seccion}
 
 ::: {.fragment .fade-up}
 ```{=html}
@@ -186,7 +164,7 @@ A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos cultur
 
 ---
 
-## Artículos {#articulos}
+## Artículos {#articulos .seccion}
 
 ::: {.fragment .fade-up}
 ```{=html}

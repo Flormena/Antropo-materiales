@@ -340,20 +340,31 @@
 </div>
 <div class="fragment fade-up">
 <div class="btn-group">
-  <a class="nav-btn" href="#/fotografias">📷 Archivo</a>
+  <a class="nav-btn" href="#/archivos">🗂️ Archivos</a>
   <a class="nav-btn" href="#/videos">🎬 Videos</a>
   <a class="nav-btn" href="#/articulos">📰 Artículos</a>
 </div>
 </div>
 </section>
-<section id="fotografias" class="slide level2">
+<section id="archivos" class="slide level2 seccion">
+<h2>Archivos</h2>
+<div class="fragment fade-up">
+<div class="btn-group">
+  <a class="nav-btn" href="#/fotografias">📷 Fotografías de Evans-Pritchard</a>
+</div>
+<div class="btn-group">
+  <a class="nav-btn-back" href="#/inicio">← Volver al inicio</a>
+</div>
+</div>
+</section>
+<section id="fotografia" class="slide level2">
 <h2>Fotografías de Evans-Pritchard</h2>
 <div class="columns">
-<div class="column fragment fade-up" style="width:50%;">
+<div class="column fragment fade-left" style="width:50%;">
 <p>El Southern Sudan Project del Museo Pitt Rivers (Universidad de Oxford) digitalizó más de 2500 fotografías tomadas por Evans-Pritchard durante su trabajo de campo en Sudán entre 1926 y 1936.</p>
 <p>Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otros pueblos: ceremonias, viviendas, ganado y retratos.</p>
 <div style="margin-top:1.2rem;">
-  <a class="nav-btn-back" href="#/inicio">← Volver al inicio</a>
+  <a class="nav-btn-back" href="#/archivos">← Volver a archivos</a>
 </div>
 </div><div class="column fragment fade-up" style="width:50%;">
 <div class="quarto-figure quarto-figure-center" style="object-fit:cover; border-radius:10px;">
@@ -365,7 +376,7 @@
 <a class="nav-btn" href="https://southernsudan.prm.ox.ac.uk/search/photographer/Pritchard/index.html" target="_blank" style="margin-top:0.8rem;">↗ Southern Sudan Project — Pitt Rivers Museum</a>
 </div></div>
 </section>
-<section id="videos" class="slide level2">
+<section id="videos" class="slide level2 seccion">
 <h2>Videos</h2>
 <div class="fragment fade-up">
 <div class="btn-group">
@@ -403,7 +414,7 @@
 </iframe>
 </div></div>
 </section>
-<section id="articulos" class="slide level2">
+<section id="articulos" class="slide level2 seccion">
 <h2>Artículos</h2>
 <div class="fragment fade-up">
 <div class="btn-group">
@@ -512,7 +523,7 @@
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -875,44 +886,6 @@
       }
     });
     </script>
-    <div id="nav-arrows">
-      <button onclick="Reveal.prev()">‹</button>
-      <button onclick="Reveal.next()">›</button>
-    </div>
-    <style>
-      #nav-arrows {
-        position: fixed;
-        top: 50%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.5rem;
-        transform: translateY(-50%);
-        pointer-events: none;
-        z-index: 999;
-      }
-      #nav-arrows button {
-        pointer-events: all;
-        background: none;
-        border: none;
-        font-size: 3rem;
-        color: #c0392b;
-        cursor: pointer;
-        opacity: 0.4;
-        transition: opacity 0.2s;
-        line-height: 1;
-        box-shadow: none;
-      }
-      #nav-arrows button:hover {
-        opacity: 1;
-        transform: none;
-        background: none;
-        box-shadow: none;
-        color: #c0392b;
-      }
-    </style>
     
 
 </body></html>
