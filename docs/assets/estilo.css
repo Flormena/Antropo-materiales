@@ -86,6 +86,11 @@
   width: 100%;
 }
 
+.reveal h1, .reveal h2 {
+  text-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+}
+
+
 .reveal h3 {
   font-family: var(--font-body);
   font-weight: 500;

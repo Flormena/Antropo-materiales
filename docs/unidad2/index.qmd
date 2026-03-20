@@ -2,10 +2,10 @@
 title: "Unidad 2"
 subtitle: "El problema del orden social: Conflicto y gobierno"
 title-slide-attributes:
-  data-background-image: ../assets/img/fondo3.jpg
+  data-background-image: ../assets/img/fondo2.jpg
   data-background-size: cover
   data-background-position: center
-  data-background-opacity: 0,35
+  data-background-opacity: "0.85"
   
 format: 
   revealjs:
@@ -84,11 +84,13 @@ Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otro
 
 ## Videos {#videos .seccion}
 
+Selección de materiales audiovisuales para profundizar en los temas de la unidad a través de casos etnográficos.
+
 ::: {.fragment .fade-up}
 ```{=html}
-<div class="btn-group">
-  <a class="nav-btn" href="#/nuer"> The Nuer</a>
-  <a class="nav-btn" href="#/box"> Box of Treasures</a>
+<div class="btn-group" style="flex-direction: column; align-items: flex-start;">
+  <a class="nav-btn" href="#/nuer">The Nuer</a>
+  <a class="nav-btn" href="#/box">Box of Treasures</a>
   <a class="nav-btn-back" href="#/inicio">← Volver al inicio</a>
 </div>
 ```
@@ -103,7 +105,7 @@ Estas imágenes muestran escenas de la vida cotidiana de los Nuer, Azande y otro
 ::: {.column width="50%" .fragment .fade-up}
 *The Nuer* (Hilary Harris & George Breidenbach, 1971)
 
-Film etnográfico distribuido por el Film Study Center de Harvard. 73 minutos grabados en un campamento ganadero de Sudán del Sur.
+The Nuer (1971), dirigido por Hilary Harris y George Breidenbach, es un documental etnográfico basado en los estudios de E. E. Evans-Pritchard. Retrata la vida del pueblo nuer en Sudán del Sur, mostrando su organización social y la centralidad del ganado en su cultura mediante un enfoque observacional.
 
 ```{=html}
 <div style="margin-top:1.2rem;">
@@ -166,6 +168,8 @@ A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos cultur
 
 ## Artículos {#articulos .seccion}
 
+En esta sección se reúnen artículos de actualidad sobre Sudán que abordan distintas dimensiones del conflicto y la coyuntura reciente. Los textos ofrecen miradas complementarias —políticas, geopolíticas y sociales— que permiten contextualizar la situación del país y comprender mejor sus dinámicas contemporáneas.
+
 ::: {.fragment .fade-up}
 ```{=html}
 <div class="btn-group">
@@ -185,7 +189,7 @@ A través del pueblo Kwakwaka'wakw, el material muestra cómo los objetos cultur
 :::: {.columns}
 
 ::: {.column width="50%" .fragment .fade-up}
-Análisis del conflicto armado en Sudán y sus dimensiones regionales e internacionales.
+“Sudan’s World War”, publicado en New Left Review, analiza el conflicto actual en Sudán como una guerra con implicancias regionales e internacionales. El artículo examina la disputa entre facciones militares y el papel de potencias extranjeras, mostrando cómo intereses geopolíticos y económicos amplían y complejizan el conflicto más allá de sus fronteras.
 
 ```{=html}
 <div style="margin-top:1.2rem;">
@@ -211,7 +215,7 @@ Análisis del conflicto armado en Sudán y sus dimensiones regionales e internac
 :::: {.columns}
 
 ::: {.column width="50%" .fragment .fade-up}
-Reflexión sobre la posición de Sudán en el mapa geopolítico contemporáneo.
+“Where Sudan…”, publicado en New Socialist, ofrece un recorrido histórico y político que sitúa a Sudán en el cruce de dinámicas regionales y globales. El artículo explora sus conflictos, recursos y posicionamiento geopolítico para entender cómo el país refleja y condensa procesos más amplios del sistema internacional.
 
 ```{=html}
 <div style="margin-top:1.2rem;">
@@ -236,7 +240,7 @@ Reflexión sobre la posición de Sudán en el mapa geopolítico contemporáneo.
 :::: {.columns}
 
 ::: {.column width="50%" .fragment .fade-up}
-Análisis del rol de los Emiratos Árabes Unidos en el conflicto sudanés y sus intereses en la región.
+“UAE’s Subimperialism in Sudan”, publicado en Spectre Journal, analiza el papel de Emiratos Árabes Unidos en el conflicto sudanés, destacando sus intereses económicos y estratégicos. El artículo muestra cómo su intervención influye en las dinámicas de poder internas y en la proyección regional del conflicto.
 
 ```{=html}
 <div style="margin-top:1.2rem;">
